@@ -1,25 +1,36 @@
-👏 Using R (BPCells with Seurat Objects) for single-cell RNA-seq (sc-RNA-seq)
+👏 **Using R (BPCells with Seurat Objects) for single-cell RNA-seq (sc-RNA-seq)**
+
 https://lnkd.in/gZhR9YWD
 
-💯 💥 The entire test (1M neurons) was completed in just 2 minutes on my MacBook Pro with 64GB of RAM!!!
+💯 💥 _The entire test (1M neurons) was completed in just 2 minutes on my MacBook Pro with 64GB of RAM!!!_
 
 A case study on using BPCells with Seurat Objects, as presented in the Seurat v5 vignette (compiled October 20, 2023):
 
-💡 Background & Motivation
+💡 **Background & Motivation**
+
 Challenge before: Processing large scRNA-seq datasets (e.g., 1M+ cells) was memory-intensive and often infeasible on standard machines.
 
 👉 Now with BPCells: Efficient storage + on-disk operations enable scalable analysis, even on large datasets.
 
-🤜 💥 Key Tools
+🤜 💥 **Key Tools**
 BPCells: Enables fast, low-memory single-cell analysis using bit-packing and C++-based caching.
+
 Seurat: Widely used R toolkit for single-cell genomics.
+
 SeuratObject, SeuratDisk, Azimuth: Support seamless interaction between Seurat objects, on-disk storage, and reference mapping.
+
 ------------------------------snapshot of script------------------------------
+
 library(BPCells)
+
 library(Seurat)
+
 library(SeuratObject)
+
 library(SeuratDisk)
+
 library(Azimuth)
+
 
 # Load 10X HDF5 file
 brain.data <- open_matrix_10x_hdf5(
